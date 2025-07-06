@@ -138,6 +138,14 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
+#smtp configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'manich98@gmail.com'
+EMAIL_HOST_PASSWORD = 'hgpz oyos auvr dakz'
+EMAIL_USE_TLS = True
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
