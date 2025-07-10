@@ -5,6 +5,7 @@ from .forms import OrderForm
 from .models import Order, Payment, OrderProduct
 import datetime
 import json
+from store.models import Product
 
 # Create your views here.
 def payments(request):
@@ -44,7 +45,11 @@ def payments(request):
         orderproduct.variations.set(product_variation)
         orderproduct.save()
 
-    #Reduce the quantity of the sold products
+        #Reduce the quantity of the sold products
+        product = Product.objects.get(id=item.product_id)
+        product.stock -= item.quantity
+        product.save()
+
     #clear cart
     #send order received email to customer
     #send order number and transaction id back to sendData() method
