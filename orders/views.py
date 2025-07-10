@@ -51,6 +51,7 @@ def payments(request):
         product.save()
 
     #clear cart
+    CartItem.objects.filter(user=request.user).delete()
     #send order received email to customer
     #send order number and transaction id back to sendData() method
 
