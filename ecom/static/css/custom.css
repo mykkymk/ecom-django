@@ -37,3 +37,6 @@ input:checked + label:hover, input:checked ~ label:hover, input:checked ~ label:
 label:hover  ~ input:checked ~ label {
     color: #cc9000;
 }
+.rating-star i {
+    color: #cc9000;
+}
